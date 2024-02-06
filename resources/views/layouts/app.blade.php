@@ -22,7 +22,7 @@
    <!-- @vite(['resources/sass/app.scss', 'resources/js/app.js']) -->
 </head>
 
-
+            @include('layouts.modal')
             @yield('content')
     
 </body>

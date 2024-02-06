@@ -56,10 +56,10 @@
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="far fa-comments"></i>
-          <span class="badge badge-danger navbar-badge">3</span>
+          <span class="badge badge-danger navbar-badge">0</span>
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <a href="#" class="dropdown-item">
+          {{-- <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
               <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
@@ -107,7 +107,8 @@
             <!-- Message End -->
           </a>
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+          <a href="#" class="dropdown-item dropdown-footer">See All Messages</a> --}}
+          <a href="#" class="dropdown-item dropdown-footer">0 No Message</a>
         </div>
       </li>
       <!-- Notifications Dropdown Menu -->
@@ -172,7 +173,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <!-- <li class="nav-item has-treeview menu-open"> -->
-            <a href="#" class="nav-link active">
+            <a href="{{ route('home') }}" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -285,32 +286,7 @@
         <!-- /.row -->
         
       </div><!-- /.container-fluid -->
-      <div class="modal fade" id="modal-default">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Log out of Financial Guardian?</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <p style>Are you sure you want to log out of Financial Guardian before you confirm your email? Confirming the email on your account ensures you will be able to log in again.&hellip;</p>
-            </div>
-            <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal"  style="width: 225px;">Confirm account</button>
-              <a type="button" style="width: 225px;" class="btn btn-primary"  href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                    Log out
-                                    </a> 
-              <!-- <button href="{{ route('logout') }}">Yes</button> -->
-            </div>
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
+      
     </section>
     <!-- /.content -->
     <!-- Main content -->
@@ -574,7 +550,7 @@
 
   <!-- Main Footer -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong>
+    <strong>Copyright &copy; <?= date('Y');?> <a href="#">Financial Guardian System</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
       <b>Version</b> 3.0.4
